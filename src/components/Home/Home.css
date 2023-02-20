@@ -1,0 +1,83 @@
+/* home background */
+.bg{
+    background-image: url("https://venngage-wordpress.s3.amazonaws.com/uploads/2018/06/infographic-resume-template-header.png");
+    width: 100%;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+    .heading{
+        color: rgb(236, 240, 6);
+        font-size:2rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color:rgb(3, 3, 3);
+        border-radius: 10%;
+        
+    }
+ .paragraph{
+    color:black;
+    font-size: 1.2rem;
+    background-color: aliceblue;
+ }
+ .home_navbar2_login{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+ }
+
+ .start-btn{
+    font-size: 30px;
+    padding: 10px;
+    margin: 2px;
+    background-color: black;
+    color: yellow;
+    border: 2px solid green;
+    border-radius: 5px;
+ }
+ .start-btn:hover{
+    background-color: #267912;;
+    border: 2px solid rgb(128, 26, 0);
+ }
+ 
+
+ .home-content{
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 18rem;
+ } 
+
+ @media only screen and (max-width: 1024px) {
+        /* home */
+.heading{
+    font-size: 3rem;
+    font-weight: 200;
+    margin-left: 1rem;
+    margin-top: 1%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-right: 1rem;
+    background-color: wheat;
+    padding-left: 3.8rem;
+    padding-right: 3rem;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+.paragraph{
+    font-size: 1.1rem;
+    font-weight:700;
+    padding-left: 4.2%;
+    padding-right: 4%;
+    background-color: transparent;
+}
+.home-content{
+    padding-top: 12rem;
+}
+ }

@@ -1,0 +1,103 @@
+/* About Us */
+.app__aboutus{
+    margin-top: 7%;
+  }
+  .spoon__img{
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .spoon__img img{
+    width: 12%;
+    height: 12%;
+    border-radius: 10%;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 30px;
+    border: 2px solid rgb(173, 20, 20);
+    margin-bottom: 3%;
+  }
+  
+  .app__aboutus-content_history img{
+    width: 20%;
+    height: 20%;
+    border-radius: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 2%;
+  }
+  
+  .app__aboutus-content_about h1{
+    margin-top: 5px;
+    text-align: center;
+  }
+  .app__aboutus-content_history h1{
+    margin-top: 3%;
+    text-align: center;
+    border: 2px solid rgb(109, 106, 106);
+    border-width: 5px;
+  }
+  .app__aboutus-content_about p{
+    font-size: 1.0rem;
+    text-align:justify;
+    line-height: 1.5;
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+  .app__aboutus-content_history p{
+    font-size: 1.0rem;
+    margin-bottom: 5%;
+    margin-top: 2%;
+    text-align: justify;
+    padding-left: 4%;
+    padding-right: 4%;
+    line-height: 1.5;
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    /* About */
+.app__aboutus{
+  padding-top: 15%;
+}
+.spoon__img img{
+  width: 70%;
+  height: 80%;
+  border-radius: 10%;
+  margin-top: 10px;
+  border: 2px solid black;
+}
+.spoon__img{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  margin-bottom: 5%;
+}
+.app__aboutus-content_about h1{
+  margin-top: 5px;
+  text-align: center;
+}
+.app__aboutus-content_history h1{
+  margin-top: 15px;
+  text-align: center;
+  border: 2px solid black;
+  border-width: 3px;
+}
+.app__aboutus-content_about p{
+  font-size: 1.0rem;
+ text-align: justify;
+}
+.app__aboutus-content_history p{
+  font-size: 1.0rem;
+  text-align: justify;
+  margin-bottom: 5%;
+}
+.app__aboutus-content_history img{
+  width: 60%;
+  height: 20%;
+  border-radius: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-bottom: 10%;
+}
+
+  }

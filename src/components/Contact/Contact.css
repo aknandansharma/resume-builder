@@ -1,0 +1,231 @@
+/* contact section */
+.contact{
+  margin-top: 7%;
+}
+.form_control_card{
+  text-align: center;
+  margin-top: 2%;
+}
+.inputs{
+  width: 30%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border: 2px solid black;
+  font-size: 1.1rem;
+  padding-left: 2%;
+}
+
+.btn_contact{
+  
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: black;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    box-shadow: 2px 2px 5px #ddd;
+    transition: 0.2s ease-in;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5%; 
+}
+.btn_contact:hover{
+  background-color: #e38528;
+  color: #000;
+}
+.headingcontact{
+  color: #000;
+  text-align: center;
+  font-size: 2.5rem;
+}
+.container_contact h2{
+  text-align: center;
+}
+.contact .icons-container{
+  display: flex;
+  gap:1.5rem;
+  flex-wrap: wrap;
+  padding-bottom: 2rem;
+}
+
+.contact .icons-container .icons{
+  flex:1 1 15rem;
+  text-align: center;
+  padding: 1.5rem;
+  margin: 1.5rem;
+  background:black;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  border-radius: .5rem;
+}
+
+.contact .icons-container .icons i{
+  height:5rem;
+  width:5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  background: var(--main-color);
+  color:#fff;
+  border-radius: 50%;
+} 
+
+.contact .icons-container .icons h3{
+  color:white;
+  font-size: 2rem;
+  padding:.5rem 0;
+  padding-top: 1rem;
+}
+
+.contact .icons-container .icons p{
+  color:antiquewhite;
+  font-size: 1.7rem;
+}
+
+.contact .box2 box{
+  width: 60rem;
+}
+.contact .box2 form{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.contact .box2 form input{
+  width: 100%;
+  height: 3rem;
+  border: none;
+  outline: none;
+  background: none;
+  background: #333;
+  margin: 1rem;
+  text-align: center;
+  color: #777;
+}
+.contact .box2 form .message{
+  height: 10rem;
+  
+}
+.contact .box2 form button{
+  background: none;
+  outline: none;
+  border: none;
+  /* background:rgb(95, 121, 238); */
+  color: #fff;
+  padding: 2rem 3rem;
+  background-color: #e38528
+}
+.contact .box2 form h2{
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 1024px) {
+    /* contact section */
+.form_control_card{
+  text-align: center;
+  margin-top: 2%;
+}
+.inputs{
+  width: 60%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border: 2px solid black;
+  font-size: 1.1rem;
+  padding-left: 2%;
+}
+
+.btn_contact{
+  
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: black;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    box-shadow: 2px 2px 5px #ddd;
+    transition: 0.2s ease-in;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5%;
+  
+}
+.headingcontact{
+  color: #000;
+  text-align: center;
+  font-size: 2.5rem;
+}
+.container_contact h2{
+  text-align: center;
+}
+.contact .icons-container{
+  display: flex;
+  gap:1.5rem;
+  flex-wrap: wrap;
+  padding-bottom: 2rem;
+}
+
+.contact .icons-container .icons{
+  flex:1 1 15rem;
+  text-align: center;
+  padding: 1.0rem;
+  margin: 1.1rem;
+  background:#000;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  border-radius: .5rem;
+}
+
+.contact .icons-container .icons i{
+  height:5rem;
+  width:5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  background: var(--main-color);
+  color:#fff;
+  border-radius: 50%;
+} 
+
+.contact .icons-container .icons h3{
+  color:#ddd;
+  font-size: 2rem;
+  padding:.5rem 0;
+  padding-top: 1rem;
+}
+
+.contact .icons-container .icons p{
+  color:antiquewhite;
+  font-size: 1.2rem;
+}
+
+.contact .box2 box{
+  width: 30rem;
+}
+.contact .box2 form{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.contact .box2 form input{
+  width: 100%;
+  height: 3rem;
+  border: none;
+  outline: none;
+  background: none;
+  background: #333;
+  margin: 1rem;
+  text-align: center;
+  color: #777;
+}
+.contact .box2 form .message{
+  height: 10rem;
+  
+}
+
+.home_navbar2{
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+}
+.contact{
+  padding-top: 15%;
+}
+}
