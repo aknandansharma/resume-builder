@@ -1,83 +1,181 @@
-/* home background */
-.bg{
-    background-image: url("https://venngage-wordpress.s3.amazonaws.com/uploads/2018/06/infographic-resume-template-header.png");
-    width: 100%;
-    min-height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
+/* Start Global Rules */
+* {
+    box-sizing: border-box;
 }
 
-    .heading{
-        color: rgb(236, 240, 6);
-        font-size:2rem;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        background-color:rgb(3, 3, 3);
-        border-radius: 10%;
-        
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
     }
- .paragraph{
-    color:black;
-    font-size: 1.2rem;
-    background-color: aliceblue;
- }
- .home_navbar2_login{
-    padding-top: 1%;
-    padding-bottom: 1%;
-    padding-left: 2%;
-    padding-right: 2%;
- }
+}
 
- .start-btn{
-    font-size: 30px;
-    padding: 10px;
-    margin: 2px;
-    background-color: black;
-    color: yellow;
-    border: 2px solid green;
-    border-radius: 5px;
- }
- .start-btn:hover{
-    background-color: #267912;;
-    border: 2px solid rgb(128, 26, 0);
- }
- 
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
 
- .home-content{
-    /* position: absolute; */
-    width: 100%;
-    height: 100%;
-    top: 0;
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* End Global Rules */
+
+/* Start Landing Page */
+.landing-page header {
+    min-height: 80px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 18rem;
- } 
+}
 
- @media only screen and (max-width: 1024px) {
-        /* home */
-.heading{
-    font-size: 3rem;
-    font-weight: 200;
-    margin-left: 1rem;
-    margin-top: 1%;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    margin-right: 1rem;
-    background-color: wheat;
-    padding-left: 3.8rem;
-    padding-right: 3rem;
-    border-radius: 50%;
-    border: 2px solid black;
+@media (max-width: 767px) {
+    .landing-page header {
+        min-height: auto;
+        display: initial;
+    }
 }
-.paragraph{
-    font-size: 1.1rem;
-    font-weight:700;
-    padding-left: 4.2%;
-    padding-right: 4%;
-    background-color: transparent;
+
+.landing-page header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.home-content{
-    padding-top: 12rem;
+
+@media (max-width: 767px) {
+    .landing-page header .container {
+        flex-direction: column;
+        justify-content: center;
+    }
 }
- }
+
+.landing-page header .logo {
+    color: #5d5d5d;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+@media (max-width: 767px) {
+    .landing-page header .logo {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.landing-page header .links {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .landing-page header .links {
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+.landing-page header .links li {
+    margin-left: 30px;
+    color: #5d5d5d;
+    cursor: pointer;
+    transition: .3s;
+}
+
+@media (max-width: 767px) {
+    .landing-page header .links li {
+        margin-left: auto;
+    }
+}
+
+.landing-page header .links li:last-child {
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #FFF;
+    background-color: #6c63ff;
+}
+
+.landing-page header .links li:not(:last-child):hover {
+    color: #6c63ff;
+}
+
+.landing-page .content .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 140px;
+    min-height: calc(100vh - 80px);
+}
+
+@media (max-width: 767px) {
+    .landing-page .content .container {
+        gap: 0;
+        min-height: calc(100vh - 101px);
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 767px) {
+    .landing-page .content .info {
+        text-align: center;
+        margin-bottom: 15px
+    }
+}
+
+.landing-page .content .info h1 {
+    color: #5d5d5d;
+    font-size: 44px;
+}
+
+.landing-page .content .info p {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 15px;
+    color: #5d5d5d;
+}
+
+.landing-page .content .info button {
+    border: 0;
+    border-radius: 20px;
+    padding: 12px 30px;
+    margin-top: 30px;
+    cursor: pointer;
+    color: #FFF;
+    background-color: #6c63ff;
+}
+.landing-page .content .info button:hover {
+    background-color: #5d5d5d;
+
+}
+
+.landing-page .content .image img {
+    max-width: 100%;
+}
+
+/* End Landing Page */
+

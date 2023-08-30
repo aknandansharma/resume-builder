@@ -58,7 +58,7 @@ const About = () => (
         <h1 className="headtext__cormorant">Our History</h1>
         <br />
         <img
-          src="https://www.lucasgroup.com/wp-content/uploads/2019/10/71-Top-5-Resume-Writing-Tips-900x600.jpg"
+          src="https://d.novoresume.com/images/landing_page/wave-with-people.webp"
           alt="about_spoon"
           className="spoon__img"
         />

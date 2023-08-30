@@ -1,145 +1,45 @@
-.navbar_fixed{
-	position: fixed;
-	top: 0;
-	width: 100%;
-  }
-  .container1 {
-	  display: flex;
-	  align-items: center;
-	  justify-content: space-between;
-	  height: 80px;
-	  padding: 0 2rem;
-	  background-color: rgb(255, 255, 255);;
-	  color: var(--textColor);
-  }
-  .container1 span{
-	  color: rgb(25, 119, 126);
-	  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  }
-  
-  .links{
-	  display: flex;
-	  justify-content: flex-end;
-	  list-style: none;  
-  }
-  .home:hover{
-	color:#d13232;
-  background-color: rgb(255, 251, 0);
-  }
-  .Header:hover{
-	color:yellow;
-  background-color: rgb(50, 150, 20);
-  }
-  .about:hover{
-  color: #d13232;
-  background-color: rgb(255, 251, 0);
-  }
-  .signin:hover{
-  color: #d13232;
-  background-color: rgb(255, 251, 0);
-  }
-  .contactus:hover{
-  color: #d13232;
-  background-color: rgb(255, 251, 0);
-  }
-  
-  .home,.Header,.about,.signin, .contactus{
-	  text-decoration: none;
-	  color: #030e12;
-	  font-size: 18px;
-	  padding: 10px 20px;
-    font-family: 'Kaushan Script', cursive;
-  }
-  
-  .container1 .nav-btn {
-	  padding: 2px;
-	  cursor: pointer;
-	  background: transparent;
-	  border: none;
-	  outline: none;
-	  color: var(--textColor);
-	  visibility: hidden;
-	  opacity: 0;
-	  font-size: 1.8rem;
-  }
-  
-  .container1 div,
-  nav {
-	  display: flex;
-	  align-items: center;
-	 
-  }
-  .container1 h{
-	  color:black;
-	  font-size: 2rem;
-	  font-family: 'Kaushan Script', cursive;
-	  cursor: pointer;
-	 }
+.navLogo{
+    font-size: 30px;
+    margin-left: 20px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-
-	 @media only screen and (max-width: 1024px) {
-		/* navbar main */
-.container1 .nav-btn {
-	visibility: visible;
-	opacity: 1;
-
-}
-.container1 nav{
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 50%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 2rem;
-    /* background-color: #030e12; */
-    transition: 0.5s;
-    transform: translateX(100vh);
-}
-.container1 .responsive{
-    transform:none;
-}
-nav .nav-close-btn{
-    position: absolute;
-    top: 1rem;
-    right: 2rem;
-    padding-left: 20%;
-}
-/* .links{
-    font-size: 1.5rem;
-    color: #030e12;
-} */
-.Nav0{
-  font-size: 1.5rem;
-    display:flex;
-    flex-direction: column;
-    /* background: rgba(0,0,0,0.5); */
-    max-width: 100%;
-    max-height:max-content;
-    z-index: 1000;
-	background-color: wheat;
-}
-.links{
-    font-size: 1.5rem;
-    display:flex;
-    flex-direction: column;
-    max-height: 100%;
-    z-index: 1000;	
-}
-.signin1{
-    background-color: red;
-    border-radius: 20rem;
-    color: aliceblue;
-}
-.home,.Header,.about,.signin,.signin1,.contactus{
-    text-decoration: none;
-    color:#030e12;
+.navitems{
+    margin-right: 20px;
     font-size: 20px;
-    padding: 20px 20px;
-	padding-bottom: 5%;
-  font-weight: 500;
 }
-	 }
+
+.navitems li{
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.navitems li Link{
+    text-decoration: none;
+    color: #fff;
+}
+
+.navitems li Link:hover{
+    color: #d81111;
+    /* text-decoration: none; */
+}
+
+
+
+.resumeBTN{
+    background-color: #6c63ff;
+    color: red;
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.resumeBTN:hover{
+  
+    color: white;
+    background-color: greenyellow;
+}
