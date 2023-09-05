@@ -354,15 +354,52 @@ function Editor(props) {
   };
 
   const handleSubmission = () => {
+
+    let isValid = true;
+    const errors = {};
+
     switch (sections[activeSectionKey]) {
       case sections.basicInfo: {
+        const { name, title, email, phone } = values;
+
+        if (!name) {
+          errors.name = "Name is required";
+          isValid = false;
+        }
+
+        if (!title) {
+          errors.title = "Title is required";
+          isValid = false;
+        }
+
+        if (!email) {
+          errors.email = "Email is required";
+          isValid = false;
+        } else if (!/^\S+@\S+\.\S+$/.test(email)) {
+          errors.email = "Invalid email address";
+          isValid = false;
+        }
+
+        if (!phone) {
+          errors.phone = "Phone number is required";
+          isValid = false;
+        } else if (!/^\d{10}$/.test(phone)) {
+          errors.phone = "Invalid phone number (10 digits required)";
+          isValid = false;
+        }
+
+        if (!isValid) {
+          alert(Object.values(errors)[0]);
+          return;
+        }
+
         const tempDetail = {
-          name: values.name,
-          title: values.title,
+          name,
+          title,
           linkedin: values.linkedin,
           github: values.github,
-          email: values.email,
-          phone: values.phone,
+          email,
+          phone,
         };
 
         props.setInformation((prev) => ({
@@ -375,19 +412,26 @@ function Editor(props) {
         }));
         break;
       }
+
       case sections.workExp: {
+        const { certificationLink, title, startDate, endDate, companyName, location, points } = values;
+        if (!certificationLink || !title || !startDate || !endDate || !companyName || !location || !points) {
+          alert("Please fill all the fields");
+          return;
+        }
+      
         const tempDetail = {
-          certificationLink: values.certificationLink,
-          title: values.title,
-          startDate: values.startDate,
-          endDate: values.endDate,
-          companyName: values.companyName,
-          location: values.location,
-          points: values.points,
+          certificationLink,
+          title,
+          startDate,
+          endDate,
+          companyName,
+          location,
+          points,
         };
         const tempDetails = [...information[sections.workExp]?.details];
         tempDetails[activeDetailIndex] = tempDetail;
-
+      
         props.setInformation((prev) => ({
           ...prev,
           [sections.workExp]: {
@@ -398,17 +442,26 @@ function Editor(props) {
         }));
         break;
       }
+      
+
       case sections.project: {
+        const { link, title, overview, github, points } = values;
+      
+        if (!link || !title || !overview || !github || !points) {
+          alert("Please fill all the fields");
+          return;
+        }
+      
         const tempDetail = {
-          link: values.link,
-          title: values.title,
-          overview: values.overview,
-          github: values.github,
-          points: values.points,
+          link,
+          title,
+          overview,
+          github,
+          points,
         };
         const tempDetails = [...information[sections.project]?.details];
         tempDetails[activeDetailIndex] = tempDetail;
-
+      
         props.setInformation((prev) => ({
           ...prev,
           [sections.project]: {
@@ -419,16 +472,26 @@ function Editor(props) {
         }));
         break;
       }
+
       case sections.education: {
+        const { title, college, startDate, endDate } = values;
+      
+        // Check if any of the fields are empty
+        if (!title || !college || !startDate || !endDate) {
+          // Handle validation error, for example, display an error message
+          alert("All fields are mandatory");
+          return;
+        }
+      
         const tempDetail = {
-          title: values.title,
-          college: values.college,
-          startDate: values.startDate,
-          endDate: values.endDate,
+          title,
+          college,
+          startDate,
+          endDate,
         };
         const tempDetails = [...information[sections.education]?.details];
         tempDetails[activeDetailIndex] = tempDetail;
-
+      
         props.setInformation((prev) => ({
           ...prev,
           [sections.education]: {
@@ -439,6 +502,8 @@ function Editor(props) {
         }));
         break;
       }
+      
+      
       case sections.achievement: {
         const tempPoints = values.points;
 
@@ -452,9 +517,19 @@ function Editor(props) {
         }));
         break;
       }
-      case sections.summary: {
-        const tempDetail = values.summary;
 
+      case sections.summary: {
+        const summary = values.summary;
+      
+        // Check if the summary field is empty
+        if (!summary) {
+          // Handle validation error, for example, display an error message
+          alert("Summary field is mandatory");
+          return;
+        }
+      
+        const tempDetail = summary;
+      
         props.setInformation((prev) => ({
           ...prev,
           [sections.summary]: {
@@ -465,6 +540,8 @@ function Editor(props) {
         }));
         break;
       }
+      
+
       case sections.other: {
         const tempDetail = values.other;
 
@@ -547,8 +624,8 @@ function Editor(props) {
           ? [...activeInfo.details[0]?.points]
           : ""
         : activeInfo?.points
-        ? [...activeInfo.points]
-        : "",
+          ? [...activeInfo.points]
+          : "",
       title: activeInfo?.details
         ? activeInfo.details[0]?.title || ""
         : activeInfo?.detail?.title || "",
@@ -594,9 +671,8 @@ function Editor(props) {
       <div className={styles.header}>
         {Object.keys(sections)?.map((key) => (
           <div
-            className={`${styles.section} ${
-              activeSectionKey === key ? styles.active : ""
-            }`}
+            className={`${styles.section} ${activeSectionKey === key ? styles.active : ""
+              }`}
             key={key}
             onClick={() => setActiveSectionKey(key)}
           >
@@ -616,27 +692,26 @@ function Editor(props) {
         <div className={styles.chips}>
           {activeInformation?.details
             ? activeInformation?.details?.map((item, index) => (
-                <div
-                  className={`${styles.chip} ${
-                    activeDetailIndex === index ? styles.active : ""
+              <div
+                className={`${styles.chip} ${activeDetailIndex === index ? styles.active : ""
                   }`}
-                  key={item.title + index}
-                  onClick={() => setActiveDetailIndex(index)}
-                >
-                  <p>
-                    {sections[activeSectionKey]} {index + 1}
-                  </p>
-                  <X
-                    onClick={(event) => {
-                      event.stopPropagation();
-                      handleDeleteDetail(index);
-                    }}
-                  />
-                </div>
-              ))
+                key={item.title + index}
+                onClick={() => setActiveDetailIndex(index)}
+              >
+                <p>
+                  {sections[activeSectionKey]} {index + 1}
+                </p>
+                <X
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    handleDeleteDetail(index);
+                  }}
+                />
+              </div>
+            ))
             : ""}
           {activeInformation?.details &&
-          activeInformation?.details?.length > 0 ? (
+            activeInformation?.details?.length > 0 ? (
             <div className={styles.new} onClick={handleAddNew}>
               +New
             </div>
